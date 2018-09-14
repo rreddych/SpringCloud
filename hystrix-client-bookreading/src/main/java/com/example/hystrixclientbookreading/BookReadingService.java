@@ -9,6 +9,10 @@ import org.springframework.web.client.RestTemplate;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
+/*Hystrix looks for any method annotated with the @HystrixCommand annotation, 
+ * and wraps that method in a proxy connected to a circuit breaker so that Hystrix can monitor it.
+ *  This currently only works in a class marked with @Component or @Service. 
+ *  So you cannot directly annotate over controller methods in a @RestController class.*/
 @Service
 public class BookReadingService {
 	
