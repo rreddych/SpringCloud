@@ -1,0 +1,47 @@
+spring:
+  profiles:
+    active:
+    - eurekaone
+---  
+spring:
+  profiles: eurekaone
+
+server:
+  port: 6001
+eureka:
+  instance:
+    appname: eone
+    hostname: 127.0.0.1
+  client:
+    fetch-registry: true
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://127.0.0.1:6002
+    
+---
+spring:
+  profiles: eurekatwo
+server:
+  port: 6002
+eureka:
+  instance:
+    appname: etwo
+    hostname: 127.0.0.1
+  client:
+    fetch-registry: true
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://127.0.0.1:6001
+    
+---
+spring:
+  profiles: eurekathree
+server:
+  port: 6003
+eureka:
+  instance:
+    appname: ethree
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: false

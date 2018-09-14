@@ -1,0 +1,10 @@
+ribbon:
+  eureka:
+    enabled: false
+  eager-load:
+    enabled: true
+    clients: say-hello
+say-hello:
+  ribbon:
+    listOfServers: localhost:9090,localhost:9091,localhost:9092
+    ServerListRefreshalInterval: 5000

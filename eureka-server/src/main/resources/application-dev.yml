@@ -1,0 +1,9 @@
+server:
+  port: 6000
+
+eureka:
+  instance:
+    appname: eone
+  client:
+    fetch-registry: true
+    register-with-eureka: false

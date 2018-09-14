@@ -1,0 +1,20 @@
+spring:
+  profiles: dev
+  application:
+    name: greetings-app
+server:
+  port: 9090
+---
+spring:
+  profiles: test
+  application:
+    name: greetings-app
+server:
+  port: 9091
+---
+spring:
+  profiles: prod
+  application:
+    name: greetings-app
+server:
+  port: 9092

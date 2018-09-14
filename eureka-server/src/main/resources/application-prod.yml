@@ -1,0 +1,10 @@
+server:
+  port: 6002
+
+eureka:
+  instance:
+    hostname: localhost
+    appname: ethree
+  client:
+    fetch-registry: true
+    register-with-eureka: false
